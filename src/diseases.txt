@@ -1,0 +1,703 @@
+# Format: Name | synonyms ; separated | tool ids space separated. "@Specialty | default tools" starts a section.
+@Critical care / Sepsis | sofa qsofa news2 sirs apache saps2
+Sepsis | septicemia;blood poisoning | sepsis3 sep1 sirs_c qsofa sofa lact_clear abx_timeout pitt
+Septic shock | vasopressor shock | sepsis3 sep1 map nee vis pressor vaso sofa_resp_ignore
+Bacteremia | BSI;bloodstream infection | pitt clabsi_cdc
+Multiple organ dysfunction syndrome | MODS;MOF;multiorgan failure | mods sofa
+Shock (undifferentiated) | circulatory failure | si map plr svv calc_ivc vti_co cao2
+Hypovolemic shock | hemorrhagic shock | atls_hem si abc_mtp mtp
+Cardiogenic shock | pump failure | scai cpo papi forrester killip vis
+Obstructive shock | tamponade shock | calc_ivc
+Distributive shock | vasoplegia | nee vaso
+Toxic shock syndrome | TSS | sepsis3 sep1
+Necrotizing fasciitis | NSTI;flesh-eating | lrinec
+Systemic inflammatory response syndrome | SIRS | sirs_c sirs
+Cardiac arrest | CPR;asystole;VF arrest;PEA | acls tth cooling
+Post-cardiac arrest syndrome | ROSC;hypoxic ischemic encephalopathy | tth cooling four
+Delirium (ICU) | acute confusion;encephalopathy | cam icdsc fourat delirium_mgmt abcdef rass
+Agitation | restlessness | rass sas ramsay
+ICU-acquired weakness | critical illness polyneuropathy;myopathy | mrc_power
+Pressure injury | bedsore;decubitus ulcer | braden norton
+Malnutrition | undernutrition;cachexia | nutric nrs2002 must icu_energy mifflin pennstate hb
+Refeeding syndrome | refeeding | phosrep kcl_iv mgrep
+Brain death | death by neurologic criteria | braindeath bd_c
+End of life care | palliative;withdrawal of care | eol
+Frailty | frail elderly | cfs katz barthel
+Fever in ICU | pyrexia;new-onset fever | sirs_c
+Hypothermia (accidental) | low body temperature | hypoth cooling
+Heat stroke | hyperthermia;heat illness | 
+Anaphylaxis | anaphylactic shock;severe allergy | anaph anaph_c
+Angioedema | ACE inhibitor angioedema;hereditary angioedema | anaph lemon
+Transfusion reaction | TRALI;TACO;hemolytic transfusion reaction | transfusion
+Massive transfusion | MTP | mtp abc_mtp
+@Respiratory | news2 pf curb65
+Acute respiratory distress syndrome | ARDS;shock lung | berlin_c ards_global berlin ards pbw dp mp murray pf oi pronetx ecmo_ref rox
+Acute respiratory failure | hypoxemic respiratory failure;type 1 respiratory failure | pf aagrad rox nippv vent_fio2
+Hypercapnic respiratory failure | type 2 respiratory failure | vent_rr nippv respcomp
+Community-acquired pneumonia | CAP;pneumonia | curb65 crb65 psi psi_n smartcop idsa_cap abx_timeout
+Severe community-acquired pneumonia | severe CAP | idsa_cap smartcop curb65
+Hospital-acquired pneumonia | HAP;nosocomial pneumonia | cpis abx_timeout
+Ventilator-associated pneumonia | VAP | cpis vap vap_cdc abx_timeout
+Aspiration pneumonia | aspiration pneumonitis;Mendelson | curb65
+COVID-19 pneumonia | SARS-CoV-2;coronavirus | rox pf berlin_c pronetx
+Influenza | flu | curb65
+Pulmonary embolism | PE;pulmonary thromboembolism | wells_pe perc geneva_r geneva pesi pesi_n spesi ali_pe
+Massive pulmonary embolism | high-risk PE | ali_pe spesi
+Deep vein thrombosis | DVT;venous thrombosis | wells_dvt vte_scd padua caprini
+Venous thromboembolism | VTE | padua caprini improve_vte improve_bleed khorana vte_scd
+COPD exacerbation | AECOPD;chronic bronchitis;emphysema | bode cat mmrc gold nippv
+Chronic obstructive pulmonary disease | COPD | bode cat mmrc gold
+Acute severe asthma | status asthmaticus;asthma attack | pram
+Asthma | bronchial asthma | pram
+Pleural effusion | hydrothorax | light
+Empyema | parapneumonic effusion | light
+Pneumothorax | collapsed lung;tension pneumothorax | 
+Hemothorax | blood in pleura | atls_hem
+Massive hemoptysis | hemoptysis | 
+Obstructive sleep apnea | OSA;sleep apnoea | stopbang epworth
+Obesity hypoventilation syndrome | Pickwickian | stopbang
+Interstitial lung disease | ILD;pulmonary fibrosis;IPF | mmrc
+Pulmonary hypertension | PAH | papi
+Bronchiectasis | | mmrc
+Cystic fibrosis | CF | 
+Lung abscess | | curb65
+Tuberculosis | TB;pulmonary tuberculosis | 
+Acute chest syndrome | sickle chest | pf
+Atelectasis | lung collapse | 
+Upper airway obstruction | stridor | lemon moans
+Difficult airway | difficult intubation | mallampati diffairway lemon moans rods macocha hemodyn_huang cormack intub
+Post-extubation stridor | laryngeal edema | extub
+Weaning failure | difficult weaning;prolonged ventilation | wean sbtfail satfail rsbi extub
+Tracheostomy | trach | trach
+Drowning | near-drowning | pf
+Carbon monoxide poisoning | CO poisoning | 
+Smoke inhalation | inhalation injury | baux_n
+Altitude sickness | HAPE;HACE | 
+@Cardiology | news2 heart
+Acute coronary syndrome | ACS;heart attack | heart timi_ua stemi
+ST-elevation myocardial infarction | STEMI;MI | timi_stemi killip stemi
+Non-ST elevation myocardial infarction | NSTEMI;NSTE-ACS | timi_ua heart
+Unstable angina | UA | timi_ua heart
+Stable angina | angina pectoris;chronic coronary syndrome | ccs ascvd
+Chest pain | | heart timi_ua perc wells_pe aortic_ddr
+Atrial fibrillation | AF;afib | chadsvasc cha2ds2va chads2 hasbled
+Atrial flutter | | chadsvasc hasbled
+Supraventricular tachycardia | SVT;PSVT | 
+Ventricular tachycardia | VT | acls
+Ventricular fibrillation | VF | acls
+Bradycardia | heart block;AV block | 
+Long QT syndrome | QT prolongation;torsades de pointes | qtc
+Acute heart failure | ADHF;pulmonary edema;cardiogenic pulmonary edema | nyha forrester nippv
+Chronic heart failure | CHF;HFrEF | nyha
+Heart failure with preserved ejection fraction | HFpEF;diastolic heart failure | hfa_peff
+Hypertensive emergency | malignant hypertension;hypertensive crisis | map
+Hypertensive urgency | | map
+Hypertension | high blood pressure;HTN | ascvd
+Aortic dissection | dissecting aneurysm | aortic_ddr
+Abdominal aortic aneurysm | AAA;ruptured AAA | atls_hem
+Cardiac tamponade | pericardial tamponade | calc_ivc
+Pericarditis | acute pericarditis | 
+Myocarditis | | 
+Infective endocarditis | IE;bacterial endocarditis | duke_c duke_crit_note
+Rheumatic fever | acute rheumatic fever;ARF | jones
+Rheumatic heart disease | RHD | jones
+Syncope | fainting | sfsyncope canadian_syncope
+Hypertrophic cardiomyopathy | HCM | 
+Dilated cardiomyopathy | DCM | nyha
+Takotsubo cardiomyopathy | stress cardiomyopathy | 
+Peripartum cardiomyopathy | PPCM | nyha
+Left ventricular hypertrophy | LVH | lvh_sokolow
+Dyslipidemia | hypercholesterolemia;high cholesterol | ascvd
+Cardiovascular risk | ASCVD risk | ascvd
+Peripheral artery disease | PAD;claudication | ascvd
+Acute limb ischemia | | 
+Valvular heart disease | aortic stenosis;mitral regurgitation | 
+Pulmonary edema | flash pulmonary edema | nippv
+@Neurology | gcs four
+Acute ischemic stroke | stroke;CVA;cerebral infarction | nihss stroke_tpa mrs
+Transient ischemic attack | TIA;mini-stroke | abcd2
+Intracerebral hemorrhage | ICH;hemorrhagic stroke | ich abc2 gcs
+Subarachnoid hemorrhage | SAH;aneurysmal SAH | hunthess wfns mfisher fisher ottawasah sah
+Traumatic brain injury | TBI;head injury | gcs gcsp cct tbi cpp gos pecarn_note pecarn_old
+Raised intracranial pressure | ICP;intracranial hypertension;cerebral edema | cpp tbi
+Status epilepticus | SE;seizure;convulsive status | se seizure_stess
+Seizure | epilepsy;fit;convulsion | se
+Coma | unconscious | gcs four avpu
+Meningitis | bacterial meningitis | 
+Encephalitis | viral encephalitis;HSV encephalitis | 
+Acute febrile encephalopathy | AFE | gcs
+Guillain–Barré syndrome | GBS;AIDP | egris gbs_c mg_crisis_note mrc_power
+Myasthenia gravis | myasthenic crisis | mg_crisis_note
+Acute flaccid paralysis | AFP | mrc_power
+Spinal cord injury | SCI;spinal trauma | nexus ccsr
+Cervical spine injury | neck injury;C-spine | nexus ccsr
+Hepatic encephalopathy | portosystemic encephalopathy | westhaven
+Wernicke encephalopathy | thiamine deficiency | 
+Delirium tremens | alcohol withdrawal delirium | ciwa
+Spasticity | | ashworth
+Parkinson disease | Parkinson's | 
+Dementia | Alzheimer disease;cognitive impairment | minicog
+Migraine | headache | ottawasah
+Thunderclap headache | sudden headache | ottawasah
+Brain abscess | | 
+Arteriovenous malformation | AVM | spetzler
+Cerebral venous thrombosis | CVST;dural sinus thrombosis | 
+Posterior reversible encephalopathy syndrome | PRES | 
+Narcolepsy / daytime sleepiness | hypersomnia | epworth
+Bell palsy | facial palsy | 
+@Gastroenterology / Hepatology | childpugh meld
+Upper gastrointestinal bleeding | UGIB;hematemesis;melena | blatchford rockall aims65 uppergi
+Peptic ulcer bleeding | bleeding ulcer | blatchford rockall
+Variceal bleeding | esophageal varices | childpugh meld blatchford uppergi
+Lower gastrointestinal bleeding | LGIB;hematochezia | oakland
+Acute pancreatitis | pancreatitis | ranson bisap ctsi atlanta marshall_mod apache
+Severe acute pancreatitis | necrotizing pancreatitis | atlanta marshall_mod ctsi
+Acute liver failure | fulminant hepatic failure;ALF | kings kingsapap kings_nonapap harmless_acg
+Acetaminophen-induced liver injury | paracetamol hepatotoxicity | apap nac kingsapap
+Cirrhosis | chronic liver disease;liver cirrhosis | childpugh meld fib4 apri
+Acute-on-chronic liver failure | ACLF | meld childpugh
+Alcoholic hepatitis | alcohol-associated hepatitis | maddrey gahs lille meld
+Spontaneous bacterial peritonitis | SBP | sbp_pmn saag
+Ascites | | saag sbp_pmn
+Hepatorenal syndrome | HRS | hepatorenal
+Non-alcoholic fatty liver disease | NAFLD;MASLD;fatty liver | fib4 apri
+Hepatitis B | HBV | fib4 apri
+Hepatitis C | HCV | fib4 apri
+Drug-induced liver injury | DILI | ri_lfts
+Acute cholangitis | ascending cholangitis | tokyo_ac charcot
+Acute cholecystitis | gallbladder inflammation | tokyo_acs
+Biliary colic | gallstones;cholelithiasis | 
+Acute appendicitis | appendicitis | alvarado pas
+Bowel obstruction | intestinal obstruction;SBO | 
+Paralytic ileus | ileus | 
+Mesenteric ischemia | bowel ischemia | 
+Perforated viscus | peritonitis | 
+Clostridioides difficile infection | C. diff;CDI;pseudomembranous colitis | 
+Acute diarrhea | gastroenteritis | 
+Inflammatory bowel disease | Crohn disease;ulcerative colitis | 
+Toxic megacolon | | 
+Irritable bowel syndrome | IBS | rome_ibs
+Intra-abdominal hypertension | IAH;abdominal compartment syndrome | ppep cpp
+Acute abdominal distension | | ppep
+Jaundice | hyperbilirubinemia | ri_lfts
+Wilson disease | | kings_nonapap
+Autoimmune hepatitis | AIH | 
+Budd–Chiari syndrome | hepatic vein thrombosis | saag
+@Nephrology | kdigo cg ckdepi21
+Acute kidney injury | AKI;acute renal failure | kdigo akin_cr rifle fena feurea aki_c aki_bundle bunratio
+Chronic kidney disease | CKD;chronic renal failure | ckdepi21 ckdepicys mdrd ckdstage upcr
+End-stage renal disease | ESRD;kidney failure;dialysis | ktv urr crrtdose
+Renal replacement therapy | CRRT;hemodialysis;CVVHDF;SLED | crrt crrtdose ktv urr
+Contrast nephropathy | CIN;contrast-associated AKI | kdigo
+Rhabdomyolysis | crush syndrome | kdigo
+Nephrotic syndrome | | upcr
+Glomerulonephritis | nephritic syndrome | upcr
+Renal tubular acidosis | RTA | uag urine_osm_gap
+Urinary tract infection | UTI;pyelonephritis | cauti cauti_cdc
+Catheter-associated UTI | CAUTI | cauti cauti_cdc
+Hyperkalemia | high potassium | hyperk tth
+Hypokalemia | low potassium | kdef kcl_iv tth
+Hyponatremia | low sodium | nadef hyponat_rate naacetate_3pct osm tbw
+Hypernatremia | high sodium | fwd tbw
+SIADH | syndrome of inappropriate ADH | nadef hyponat_rate
+Diabetes insipidus | DI | fwd
+Hypocalcemia | low calcium | cca ca_ion calcium
+Hypercalcemia | high calcium | cca ca_phos_note
+Hypomagnesemia | low magnesium | mgrep fek
+Hypophosphatemia | low phosphate | phosrep fek
+Metabolic acidosis | acidemia;high anion gap acidosis | ag agcorr winters bicarb nahco3 sid
+Normal anion gap metabolic acidosis | NAGMA;hyperchloremic acidosis | uag urine_osm_gap agcorr
+Metabolic alkalosis | alkalemia | metalk
+Respiratory acidosis | hypercapnia | respcomp acidbase
+Respiratory alkalosis | hyperventilation | respcomp
+Lactic acidosis | hyperlactatemia | lact_clear agcorr
+Toxic alcohol poisoning | methanol;ethylene glycol | osmgap agcorr
+@Endocrine | 
+Diabetic ketoacidosis | DKA | dka_c dka dkacalc insulin_drip cna cna_h agcorr kcl_iv
+Hyperosmolar hyperglycemic state | HHS;HONK | hhs_c hhs dkacalc cna_h osm
+Hypoglycemia | low blood sugar | units_glu
+Type 2 diabetes | T2DM;diabetes mellitus | eag homa tdd_insulin
+Type 1 diabetes | T1DM | eag
+Inpatient hyperglycemia | stress hyperglycemia | tdd_insulin
+Thyroid storm | thyrotoxic crisis | burch nmda_dx
+Myxedema coma | severe hypothyroidism | myxedema
+Hyperthyroidism | thyrotoxicosis;Graves disease | burch
+Hypothyroidism | | myxedema
+Adrenal crisis | Addisonian crisis;adrenal insufficiency | adrenal steroid
+Critical illness-related corticosteroid insufficiency | CIRCI | steroid
+Cushing syndrome | hypercortisolism | 
+Pheochromocytoma | | 
+Obesity | morbid obesity | bmi bsa weights
+Insulin resistance | metabolic syndrome | homa
+Hypopituitarism | Sheehan syndrome | adrenal
+Diabetes in pregnancy | gestational diabetes | eag
+@Hematology / Oncology | 
+Disseminated intravascular coagulation | DIC;consumptive coagulopathy | dic isth_dic2 sic dic_c
+Sepsis-induced coagulopathy | SIC | sic
+Heparin-induced thrombocytopenia | HIT | 4ts
+Thrombocytopenia | low platelets | 4ts plasmic cci_plt
+Thrombotic thrombocytopenic purpura | TTP | plasmic ttp_c
+Hemolytic uremic syndrome | HUS | plasmic
+Anemia | | retic transf_vol transfusion mentzer
+Iron deficiency anemia | IDA | ganzoni mentzer
+Thalassemia trait | thalassemia minor | mentzer
+Sickle cell disease | SCD;sickle cell anemia;sickle crisis | transf_vol
+Neutropenia | low neutrophils | anc anc2
+Febrile neutropenia | neutropenic fever | mascc cisne neutropenic ra_dx_skip
+Tumor lysis syndrome | TLS | cairo tls_c
+Hemophagocytic lymphohistiocytosis | HLH;macrophage activation syndrome | hscore_note hlh_c
+Superior vena cava syndrome | SVC obstruction | 
+Spinal cord compression (malignant) | MSCC | 
+Hypercalcemia of malignancy | | cca ca_phos_note
+Cancer-associated thrombosis | | khorana
+Coagulopathy / bleeding | bleeding disorder | mtp
+Warfarin over-anticoagulation | high INR | 
+Hemophilia | | 
+Polycythemia | erythrocytosis | 
+Leukemia | AML;ALL;CLL;CML | ecog karnofsky
+Lymphoma | Hodgkin;non-Hodgkin | ecog karnofsky khorana
+Multiple myeloma | myeloma | ecog
+Solid tumor oncology patient | cancer;malignancy | ecog karnofsky khorana
+@Infectious disease | sirs qsofa
+Malaria | severe malaria;falciparum | 
+Dengue | dengue hemorrhagic fever;dengue shock | 
+Leptospirosis | Weil disease | 
+Scrub typhus | rickettsial | 
+Typhoid fever | enteric fever | 
+HIV/AIDS | HIV infection | 
+Tetanus | lockjaw | 
+Rabies | | 
+Infective diarrhea / cholera | cholera | 
+Central line-associated bloodstream infection | CLABSI;catheter infection | clabsi clabsi_cdc
+Cellulitis | skin infection | lrinec
+Osteomyelitis | bone infection | 
+Septic arthritis | | 
+Streptococcal pharyngitis | strep throat;tonsillitis | centor feverpain
+Invasive fungal infection | candidemia;aspergillosis | 
+Infection in immunocompromised | | mascc
+Multidrug-resistant infection | MDR;CRE;MRSA | abx_timeout vanco amino
+Tropical fever | | 
+@Obstetrics | 
+Preeclampsia | pre-eclampsia;toxemia | preecl preec_acog preec_c mg_tox
+Eclampsia | eclamptic seizure | mg_tox preec_acog
+HELLP syndrome | | helzlp_tn hellp_ms hellp_c
+Postpartum hemorrhage | PPH | mtp atls_hem
+Obstetric sepsis | maternal sepsis;puerperal sepsis | mews_ob sep1
+Labor induction | induction of labour | bishop
+Pregnancy dating | gestational age;due date | edd
+Acute fatty liver of pregnancy | AFLP | 
+Amniotic fluid embolism | AFE | acls
+Peripartum respiratory failure | ARDS in pregnancy | pf
+Jaundice in pregnancy | intrahepatic cholestasis of pregnancy | 
+Hyperemesis gravidarum | | 
+Ectopic pregnancy | | atls_hem
+Placental abruption | abruptio placentae | 
+@Pediatrics / Neonatal | 
+Neonatal resuscitation | newborn assessment | apgar
+Pediatric sepsis | sepsis in children | sirs_ped pews
+Croup | laryngotracheobronchitis | westley
+Bronchiolitis | RSV | pram
+Pediatric asthma | childhood asthma | pram
+Pediatric cardiac arrest | PALS | ped_resus ett apls_wt
+Pediatric dehydration | gastroenteritis in children | hs421
+Pediatric head injury | | pecarn_note pecarn_old pgcs
+Kawasaki disease | mucocutaneous lymph node syndrome | kawasaki kawasaki_c
+MIS-C | multisystem inflammatory syndrome in children | mis_c
+Neonatal jaundice | hyperbilirubinemia newborn | bilirubin_note
+Neonatal hypoglycemia | | gir
+Pediatric appendicitis | | pas alvarado
+Pediatric pain | | flacc wongbaker
+Pediatric kidney disease | | schwartz
+Febrile infant | fever in infant | 
+Intussusception | | 
+Epiglottitis | | 
+@Trauma / Emergency / Surgery | 
+Major trauma | polytrauma | rts iss atls_hem abc_mtp mtp gcs
+Hemorrhagic shock (trauma) | | atls_hem abc_mtp tash si mtp
+Blunt chest trauma | rib fractures;flail chest | 
+Abdominal trauma | splenic injury;liver laceration | abc_mtp
+Pelvic fracture | | atls_hem
+Burns | thermal injury;burn injury | burn rule9 baux_n burns
+Electrical injury | electrocution | rule9
+Minor head injury | concussion | cct pecarn_note pecarn_old
+Ankle injury | ankle sprain | ottawa_ankle
+Knee injury | | ottawa_knee
+Snakebite | envenomation;snake bite | snake
+Scorpion sting | | 
+Perioperative cardiac risk | preoperative assessment | rcri asa
+Postoperative pulmonary complications | | ariscat
+Postoperative nausea and vomiting | PONV | apfel
+Post-anesthesia recovery | PACU | aldrete
+Local anesthetic systemic toxicity | LAST | la_max
+Rapid sequence intubation | RSI | rsi intub
+Compartment syndrome | | 
+@Toxicology | 
+Paracetamol (acetaminophen) overdose | acetaminophen poisoning;Tylenol overdose | apap nac kingsapap
+Organophosphate poisoning | OP poisoning;insecticide poisoning | cholinergic poison
+Anticholinergic poisoning | antihistamine overdose;datura | anticholinergic poison
+Serotonin syndrome | serotonin toxicity | hunter ss_c
+Neuroleptic malignant syndrome | NMS | nms nms_c
+Digoxin toxicity | digitalis poisoning | digifab
+Alcohol intoxication | ethanol intoxication | ethanol_bac osmgap
+Alcohol withdrawal | ethanol withdrawal | ciwa
+Opioid overdose | heroin overdose | poison
+Opioid withdrawal | | cows
+Benzodiazepine overdose | | benzo poison
+Tricyclic antidepressant overdose | TCA poisoning | qtc poison
+Salicylate poisoning | aspirin overdose | agcorr poison
+Methanol poisoning | | osmgap agcorr
+Ethylene glycol poisoning | antifreeze | osmgap agcorr
+Paraquat poisoning | herbicide poisoning | poison
+Beta-blocker / calcium channel blocker overdose | | poison
+Iron poisoning | | poison
+Lithium toxicity | | poison
+Carbon monoxide / cyanide | | poison
+Mushroom poisoning | amanita | kings_nonapap
+Drug abuse / stimulant toxicity | cocaine;amphetamine | poison
+@Rheumatology / Immunology | 
+Systemic lupus erythematosus | SLE;lupus | sle2019 sle_c
+Rheumatoid arthritis | RA | gout_ra das28
+Giant cell arteritis | temporal arteritis | giant_cell
+Vasculitis | | 
+Gout | gouty arthritis | 
+Antiphospholipid syndrome | APS | 
+Scleroderma renal crisis | systemic sclerosis | 
+@Psychiatry | 
+Depression | major depressive disorder | phq9
+Anxiety disorder | generalized anxiety | gad7
+Alcohol use disorder | alcoholism | auditc ciwa
+Opioid use disorder | | cows mme
+Suicidal ideation / self-harm | overdose | phq9 poison
+@Geriatrics / Nursing | 
+Falls in elderly | fall risk | morse
+Functional decline | ADL dependence | katz barthel
+Cognitive impairment | | minicog fourat
+@Pain / Sedation | 
+Pain in ventilated patient | ICU pain | cpot bps
+Acute pain | | wongbaker flacc mme opioid_iv
+Chronic pain on opioids | | mme
+Sedation management | | rass sas ramsay abcdef
+@Infectious disease (more) | sirs qsofa sepsis3
+Chikungunya | | 
+Zika virus infection | | 
+Japanese encephalitis | JE | gcs
+Nipah virus infection | | gcs
+Ebola virus disease | viral hemorrhagic fever | 
+Lassa fever | | 
+Yellow fever | | 
+Brucellosis | | 
+Melioidosis | Burkholderia pseudomallei | 
+Leishmaniasis | kala-azar | 
+Amoebic liver abscess | | 
+Pyogenic liver abscess | | 
+Infectious mononucleosis | EBV;glandular fever | 
+Cytomegalovirus infection | CMV | 
+Herpes zoster | shingles | 
+Varicella | chickenpox | 
+Measles | rubeola | 
+Mumps | | 
+Diphtheria | | 
+Pertussis | whooping cough | 
+Botulism | | mrc_power
+Mucormycosis | black fungus | 
+Cryptococcal meningitis | | 
+Pneumocystis pneumonia | PCP;PJP | pf
+Histoplasmosis | | 
+COVID-19 | coronavirus disease | news2 rox
+Monkeypox | mpox | 
+Syphilis | | 
+Gonorrhea | | 
+Lyme disease | borreliosis | 
+Plague | Yersinia pestis | 
+Anthrax | | 
+Q fever | Coxiella | 
+Hand, foot and mouth disease | HFMD | 
+Hydatid disease | echinococcosis | 
+Neurocysticercosis | | se
+Strongyloidiasis | hyperinfection | 
+Prosthetic joint infection | | 
+Diabetic foot infection | | 
+Infected pressure ulcer | | braden
+Surgical site infection | SSI | 
+Peritoneal dialysis peritonitis | | 
+Ventriculitis | EVD infection | 
+Sinusitis | | 
+Otitis media | | 
+Epidural abscess | spinal abscess | 
+Fournier gangrene | | lrinec
+Gas gangrene | clostridial myonecrosis | lrinec
+Pyomyositis | | 
+@Cardiology (more) | heart
+Wolff–Parkinson–White syndrome | WPW;pre-excitation | 
+Brugada syndrome | | 
+Sick sinus syndrome | | 
+Complete heart block | third-degree AV block | 
+Cardiac contusion | blunt cardiac injury | 
+Constrictive pericarditis | | 
+Restrictive cardiomyopathy | amyloid heart | nyha
+Arrhythmogenic right ventricular cardiomyopathy | ARVC | 
+Mitral stenosis | | chadsvasc
+Aortic stenosis | AS | 
+Aortic regurgitation | AR | 
+Mitral regurgitation | MR | 
+Prosthetic valve thrombosis | | 
+Left ventricular thrombus | LV thrombus | 
+Ventricular septal rupture | post-MI VSD | scai
+Papillary muscle rupture | | scai
+Right ventricular failure | RV failure | papi
+Cor pulmonale | | 
+Congenital heart disease (adult) | ACHD | 
+Eisenmenger syndrome | | 
+Postural orthostatic tachycardia syndrome | POTS | 
+Vasovagal syncope | | sfsyncope
+Orthostatic hypotension | | 
+Coarctation of aorta | | 
+Raynaud phenomenon | | 
+Superficial thrombophlebitis | | wells_dvt
+Varicose veins | | 
+Lymphedema | | 
+@Neurology (more) | gcs
+Transverse myelitis | | mrc_power
+Multiple sclerosis | MS | 
+Neuromyelitis optica | NMOSD | 
+Amyotrophic lateral sclerosis | ALS;motor neuron disease | 
+Myopathy / myositis | polymyositis;dermatomyositis | mrc_power
+Periodic paralysis | hypokalemic paralysis | kdef
+Lambert–Eaton syndrome | | 
+Autoimmune encephalitis | anti-NMDA receptor encephalitis | se
+Cerebral malaria | | gcs
+Hydrocephalus | | 
+Normal pressure hydrocephalus | NPH | 
+Subdural hematoma | SDH | gcs tbi
+Extradural hematoma | epidural hematoma;EDH | gcs tbi
+Diffuse axonal injury | DAI | tbi
+Brain tumor | glioma;meningioma | 
+Cerebellar stroke | posterior circulation stroke | nihss
+Basilar artery occlusion | | nihss
+Vertigo | BPPV;vestibular neuritis | 
+Trigeminal neuralgia | | 
+Peripheral neuropathy | | 
+Restless legs syndrome | | 
+Huntington disease | | 
+Essential tremor | | 
+Status migrainosus | | 
+Idiopathic intracranial hypertension | pseudotumor cerebri | 
+Locked-in syndrome | | four
+Persistent vegetative state | unresponsive wakefulness | four
+Syndrome of trephined | | 
+@Gastroenterology (more) | 
+Gastroesophageal reflux disease | GERD;reflux | 
+Esophageal rupture | Boerhaave syndrome | 
+Mallory–Weiss tear | | blatchford
+Achalasia | | 
+Eosinophilic esophagitis | | 
+Gastroparesis | | 
+Celiac disease | coeliac disease | 
+Diverticulitis | | 
+Diverticular bleeding | | oakland
+Hemorrhoids | piles | 
+Anal fissure | | 
+Colorectal cancer | colon cancer | ecog
+Gastric cancer | stomach cancer | ecog
+Pancreatic cancer | | ecog
+Hepatocellular carcinoma | HCC;liver cancer | childpugh meld
+Primary biliary cholangitis | PBC | meld
+Primary sclerosing cholangitis | PSC | meld
+Hemochromatosis | iron overload | fib4
+Portal vein thrombosis | | childpugh
+Chronic pancreatitis | | 
+Volvulus | sigmoid volvulus | 
+Hernia (incarcerated) | strangulated hernia | 
+Short bowel syndrome | intestinal failure | tpn
+Enterocutaneous fistula | | tpn
+Feeding intolerance | high gastric residual | nutric
+Stress ulcer | stress-related mucosal disease | fasthugs
+Hepatopulmonary syndrome | | aagrad
+Ogilvie syndrome | acute colonic pseudo-obstruction | 
+@Nephrology / Urology (more) | 
+Obstructive uropathy | hydronephrosis | kdigo
+Kidney stones | nephrolithiasis;renal colic | 
+Acute urinary retention | | 
+Prostatitis | | 
+Benign prostatic hyperplasia | BPH | 
+Polycystic kidney disease | PKD | ckdstage
+Renal artery stenosis | | 
+Acute interstitial nephritis | AIN | kdigo
+Acute tubular necrosis | ATN | fena feurea
+Lupus nephritis | | upcr sle_c
+IgA nephropathy | | upcr
+Diabetic nephropathy | diabetic kidney disease | upcr ckdepi21
+Renal transplant recipient | kidney transplant | ckdepi21
+Hematuria | | 
+Testicular torsion | | 
+Bladder cancer | | 
+Renal cell carcinoma | | 
+Uremic encephalopathy | | ktv
+Dialysis disequilibrium syndrome | | urr
+@Endocrine (more) | 
+Hyperparathyroidism | | cca
+Hypoparathyroidism | | ca_ion calcium
+Conn syndrome | primary hyperaldosteronism | 
+Euglycemic DKA | SGLT2-associated DKA | dka_c dkacalc
+Lactic acidosis (metformin) | MALA | agcorr lact_clear
+Thyroid nodule | | 
+Sick euthyroid syndrome | nonthyroidal illness | 
+Hyperprolactinemia | | 
+Acromegaly | | 
+Pituitary apoplexy | | adrenal
+Osteoporosis | | 
+@Hematology (more) | 
+Aplastic anemia | | anc2
+Megaloblastic anemia | B12 deficiency;folate deficiency | retic
+Autoimmune hemolytic anemia | AIHA | retic
+G6PD deficiency | | retic
+Immune thrombocytopenia | ITP | 
+Von Willebrand disease | | 
+Antithrombin deficiency | thrombophilia | 
+Myelodysplastic syndrome | MDS | 
+Hyperviscosity syndrome | | 
+Methemoglobinemia | | cao2
+Paroxysmal nocturnal hemoglobinuria | PNH | 
+Hereditary spherocytosis | | 
+Post-transfusion purpura | | transfusion
+Bone marrow transplant complications | GVHD | 
+Neutropenic enterocolitis | typhlitis | mascc
+Differentiation syndrome | | 
+CAR-T cytokine release syndrome | CRS | 
+@Respiratory (more) | pf
+Sarcoidosis | | 
+Hypersensitivity pneumonitis | | 
+Eosinophilic pneumonia | | 
+Diffuse alveolar hemorrhage | DAH | pf
+Pulmonary alveolar proteinosis | | 
+Lung cancer | bronchogenic carcinoma | ecog
+Mesothelioma | | light
+Chylothorax | | light
+Bronchopleural fistula | | 
+Tracheoesophageal fistula | | 
+Silicosis | pneumoconiosis | 
+Asbestosis | | 
+Fat embolism syndrome | | pf
+Air embolism | | 
+Transfusion-related acute lung injury | TRALI | pf transfusion
+Neurogenic pulmonary edema | | pf
+Re-expansion pulmonary edema | | 
+Sleep-disordered breathing | | stopbang
+Ventilator-induced lung injury | VILI | dp mp pbw
+Auto-PEEP | dynamic hyperinflation | 
+Patient–ventilator dyssynchrony | | 
+Lung transplant recipient | | 
+@Toxicology (more) | poison
+Snake envenomation (neurotoxic) | krait bite;cobra bite | snake
+Snake envenomation (hemotoxic) | viper bite;VCT | snake
+Bee / wasp sting | hymenoptera | anaph
+Kerosene ingestion | hydrocarbon poisoning | 
+Corrosive ingestion | acid ingestion;alkali | 
+Aluminium phosphide poisoning | celphos | 
+Cyanide poisoning | | 
+Theophylline toxicity | | 
+Valproate toxicity | | 
+Carbamazepine toxicity | | 
+Phenytoin toxicity | | 
+Sulfonylurea overdose | | units_glu
+Insulin overdose | | units_glu
+Calcium channel blocker overdose | | 
+Beta blocker overdose | | 
+Isoniazid poisoning | INH | se
+Antipsychotic overdose | | qtc
+Methotrexate toxicity | | 
+Lead poisoning | | 
+Arsenic poisoning | | 
+Mercury poisoning | | 
+Cannabis hyperemesis | | 
+Malignant hyperthermia | MH | 
+Propofol infusion syndrome | PRIS | propofol_kcal
+@Dermatology | 
+Stevens–Johnson syndrome | SJS;TEN;toxic epidermal necrolysis | rule9
+DRESS syndrome | drug rash with eosinophilia | 
+Erythroderma | exfoliative dermatitis | rule9
+Pemphigus vulgaris | | rule9
+Staphylococcal scalded skin syndrome | SSSS | rule9
+Urticaria | hives | 
+Psoriasis | | 
+Atopic dermatitis | eczema | 
+Purpura fulminans | | dic_c
+Pressure ulcer | | braden
+Frostbite | | 
+Scabies | | 
+@ENT / Ophthalmology | 
+Peritonsillar abscess | quinsy | 
+Ludwig angina | | lemon
+Deep neck infection | | 
+Epistaxis | nosebleed | 
+Foreign body airway obstruction | choking | 
+Acute angle-closure glaucoma | | 
+Orbital cellulitis | | 
+Retinal detachment | | 
+Central retinal artery occlusion | | 
+Sudden sensorineural hearing loss | | 
+@Rheumatology (more) | 
+ANCA-associated vasculitis | GPA;Wegener;microscopic polyangiitis | 
+Polyarteritis nodosa | PAN | 
+Takayasu arteritis | | 
+Behçet disease | | 
+Dermatomyositis | | 
+Sjögren syndrome | | 
+Ankylosing spondylitis | axial spondyloarthritis | 
+Reactive arthritis | | 
+Adult-onset Still disease | | hscore_note
+Catastrophic antiphospholipid syndrome | CAPS | 
+Polymyalgia rheumatica | PMR | giant_cell
+Systemic sclerosis | scleroderma | 
+Pseudogout | CPPD | 
+Fibromyalgia | | 
+@Obstetrics / Gynecology (more) | 
+Severe preeclampsia | | preec_acog mg_tox
+Uterine rupture | | 
+Placenta previa | | 
+Septic abortion | | sep1
+Ovarian torsion | | 
+Ovarian hyperstimulation syndrome | OHSS | 
+Molar pregnancy | gestational trophoblastic disease | 
+Postpartum cardiomyopathy | | nyha
+Pregnancy-associated VTE | | wells_dvt
+Maternal cardiac arrest | | acls
+Pelvic inflammatory disease | PID | 
+Tubo-ovarian abscess | | 
+@Psychiatry (more) | 
+Bipolar disorder | mania | 
+Schizophrenia | psychosis | 
+Catatonia | | 
+Eating disorder | anorexia nervosa | bmi phosrep
+Post-traumatic stress disorder | PTSD | 
+Insomnia | | 
+Panic disorder | | gad7
+@Pediatrics (more) | 
+Neonatal sepsis | | 
+Necrotizing enterocolitis | NEC | 
+Respiratory distress syndrome (neonatal) | hyaline membrane disease | 
+Congenital diaphragmatic hernia | CDH | 
+Pyloric stenosis | | 
+Febrile seizure | | se
+Pediatric DKA | | dka_c dkacalc
+Pediatric status epilepticus | | se
+Henoch–Schönlein purpura | IgA vasculitis | 
+Nephrotic syndrome (child) | | upcr schwartz
+Rheumatic fever (child) | | jones
+Severe acute malnutrition | SAM;kwashiorkor;marasmus | 
+Pediatric trauma | | pgcs pecarn_old
+Child abuse | non-accidental injury | 
+Foreign body aspiration (child) | | 
+@Surgery / Perioperative (more) | asa
+Postoperative ileus | | 
+Anastomotic leak | | sirs_c
+Abdominal wound dehiscence | | 
+Post-op bleeding | | atls_hem
+Liver transplant recipient | | meld
+Cardiac surgery postoperative care | post-CABG | vis cpo
+Bariatric surgery patient | | bmi
+Amputation | | 
+Fat embolism (orthopedic) | | pf
+Hip fracture | neck of femur fracture | rcri
+Spine surgery | | 
+Craniotomy postoperative | | gcs
